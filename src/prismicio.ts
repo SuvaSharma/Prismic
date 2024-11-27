@@ -10,27 +10,22 @@ export const repositoryName =
 
 /**
  * A list of Route Resolver objects that define how a document's `url` field is resolved.
- *
- * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
-// TODO: Update the routes array to match your project's route structure.
 const routes: prismic.ClientConfig["routes"] = [
-  // Examples:
-  // {
-  // 	type: "homepage",
-  // 	path: "/",
-  // },
-  // {
-  // 	type: "page",
-  // 	path: "/:uid",
-  // },
+  {
+    type: "homepage",
+    path: "/",
+  },
+  {
+    type: "page",
+    uid: "about",  // Explicitly set the UID for the about page
+    path: "/about",  // This sets the path for the about page
+  },
 ];
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
  * query content from the Prismic API.
- *
- * @param config - Configuration for the Prismic client.
  */
 export const createClient = (config: prismicNext.CreateClientConfig = {}) => {
   const client = prismic.createClient(repositoryName, {

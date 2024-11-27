@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const urbanist = Urbanist({ subsets: ['latin']})
 
@@ -15,10 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#ced6e0] text-slate-100">
+    <html lang="en" className="bg-slate-400 text-slate-100">
+    
       <body
         className={urbanist.className}
       >
+          <Header />
         {children}
       </body>
     </html>
