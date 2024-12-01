@@ -54,7 +54,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.6,
           scale: 1,
           ease: "elastic.out(1,0.3)",
         }
@@ -94,11 +94,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               {renderLetters(slice.primary.first_name, "first")}
             </span>
 
-            <span className="-mt-[.2em] block text-[#ced6e0]">
+            <span className="-mt-[.2em] block text-slate-400">
               {renderLetters(slice.primary.last_name, "last")}
             </span>
           </h1>
-          <span className="job-title block bg-gradient-to-tr from-orange-500 via-yellow-200 to-orange-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-100 md:text-4xl">
+          <span className="job-title block bg-gradient-to-tr from-orange-500 via-yellow-400 to-orange-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-100 md:text-4xl">
             {slice.primary.tag_line}
           </span>
         </div>

@@ -18,9 +18,8 @@ const routes: prismic.ClientConfig["routes"] = [
   },
   {
     type: "page",
-    uid: "about",  // Explicitly set the UID for the about page
-    path: "/about",  // This sets the path for the about page
-  },
+    path: "/:uid",
+  }
 ];
 
 /**

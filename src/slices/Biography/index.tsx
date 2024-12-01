@@ -1,7 +1,10 @@
 import Bounded from "@/components/Bounded";
+import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import { Content } from "@prismicio/client";
+import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import Avatar from "./Avatar";
 
 /**
  * Props for `Biography`.
@@ -18,12 +21,37 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
     <div className="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
-      <Heading as = "h1" size="xl" className="col-start-1">
-        {slice.primary.heading}
-      </Heading>
-      <div className="prose prose-xl prose-slate prose-invert col-start-1">
-        <PrismicRichText field={slice.primary.description} />
-      </div>
+<Heading 
+  as="h1" 
+  size="xl" 
+  className="col-start-1 
+            bg-gradient-to-tr 
+            from-yellow-500 
+            via-orange-400 
+            to-yellow-500 
+            bg-clip-text 
+            text-2xl 
+            font-bold 
+            uppercase 
+            tracking-[.2em] 
+            text-transparent 
+            opacity-100 
+            md:text-4xl"
+>
+  {slice.primary.heading}
+</Heading>
+
+
+<div className="prose prose-xl prose-slate prose-invert col-start-1 text-[#1e272e]">
+  <PrismicRichText field={slice.primary.description} />
+</div>
+
+<Button linkField = {slice.primary.button_link}
+label = {slice.primary.button_text}
+/>
+
+<Avatar image={slice.primary.avatar} className="row-start-1 max-w-sm md:col-start-2 md:row-end-3" 
+/>
     </div>
     </Bounded>
   );
