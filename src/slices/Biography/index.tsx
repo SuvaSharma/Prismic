@@ -23,11 +23,11 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
     <div className="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
 <Heading 
   as="h1" 
-  size="xl" 
+  size="lg" 
   className="col-start-1 
             bg-gradient-to-tr 
             from-yellow-500 
-            via-orange-400 
+            via-orange-200 
             to-yellow-500 
             bg-clip-text 
             text-2xl 
