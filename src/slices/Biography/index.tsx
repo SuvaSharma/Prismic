@@ -24,20 +24,7 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
 <Heading 
   as="h1" 
   size="lg" 
-  className="col-start-1 
-            bg-gradient-to-tr 
-            from-yellow-500 
-            via-orange-200 
-            to-yellow-500 
-            bg-clip-text 
-            text-2xl 
-            font-bold 
-            uppercase 
-            tracking-[.2em] 
-            text-transparent 
-            opacity-100 
-            md:text-4xl"
->
+  className="col-start-1">
   {slice.primary.heading}
 </Heading>
 
