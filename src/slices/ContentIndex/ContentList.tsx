@@ -46,9 +46,10 @@ export default function ContentList({ items, contentType, fallbackItemImage, vie
                     );
                 }
             });
+            return () => ctx.revert(); // Cleanup the gsap context
         }, component);
 
-        return () => ctx.revert(); // Cleanup the gsap context
+        
     }, []);
 
     useEffect(() => {
@@ -85,6 +86,8 @@ export default function ContentList({ items, contentType, fallbackItemImage, vie
         };
     }, [currentItem]);
 
+
+
     const contentImages = items.map((item) => {
         const image = isFilled.image(item.data.hover_image) ? item.data.hover_image : fallbackItemImage;
         return asImageSrc(image, {
@@ -94,6 +97,17 @@ export default function ContentList({ items, contentType, fallbackItemImage, vie
             exp: -10
         });
     });
+
+    useEffect(()=>{
+        contentImages.forEach((url) => {
+            if(!url) return;
+            const img = new Image();
+            img.src = url;
+
+        })
+    }, [contentImages]);
+
+    
 
     const onMouseEnter = (index: number) => {
         setCurrentItem(index);
