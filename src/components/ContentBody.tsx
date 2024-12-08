@@ -1,5 +1,3 @@
-
-
 import { SliceZone } from "@prismicio/react";
 import { components } from "@/slices";
 import Bounded from "@/components/Bounded";

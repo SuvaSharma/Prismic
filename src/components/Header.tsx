@@ -1,8 +1,5 @@
 import React from "react";
 import { createClient } from "@/prismicio";
-import Link from "next/link";
-import { PrismicRichText } from "@prismicio/react";
-import { PrismicNextLink } from "@prismicio/next";
 import NavBar from "@/components/NavBar";
 
 type Settings = {

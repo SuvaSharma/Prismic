@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";

@@ -5,7 +5,6 @@ import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { metalness, roughness } from "three/webgpu";
 
 export default function Shapes() {
     return (

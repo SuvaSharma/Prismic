@@ -3,7 +3,6 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { MdCircle } from "react-icons/md";
-import { inherits } from "util";
 import { gsap} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { Content, RichTextField, asLink } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
