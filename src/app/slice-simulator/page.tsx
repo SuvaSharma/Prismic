@@ -14,7 +14,7 @@ export default async function SliceSimulatorPage({
   const slices = getSlices(state);
 
   return (
-    <SliceSimulator>
+    <SliceSimulator background="#C6E7FF">
       <SliceZone slices={slices} components={components} />
     </SliceSimulator>
   );

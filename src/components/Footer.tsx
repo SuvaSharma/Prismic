@@ -17,7 +17,7 @@ export default async function Footer() {
         <div className="name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start">
           <Link
             href="/"
-            className="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-[#1e272e]"
+            className="text-xl font-extrabold tracking-tighter text-[#0A3981] transition-colors duration-150 hover:text-[#1e272e]"
           >
             <PrismicRichText
               field={settings.data.name}
@@ -32,7 +32,7 @@ export default async function Footer() {
           >
             /
           </span>
-          <div className="text-lg text-slate-100">
+          <div className="text-lg text-[#0A3981]">
             © {new Date().getFullYear()}{" "}
             <PrismicRichText
               field={settings.data.name}
@@ -49,7 +49,7 @@ export default async function Footer() {
                 <li>
                   <PrismicNextLink
                     className={clsx(
-                      "group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:hover:text-[#1e272e]",
+                      "group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-[#0A3981]transition-colors duration-150 hover:hover:text-[#1e272e]",
                     )}
                     field={link}
                   >
@@ -72,7 +72,7 @@ export default async function Footer() {
           {isFilled.link(settings.data.github_link) && (
             <PrismicNextLink
               field={settings.data.github_link}
-              className="p-2 text-2xl text-slate-100 transition-all duration-150 hover:scale-125 hover:text-[#1e272e]"
+              className="p-2 text-2xl text-[#0A3981] transition-all duration-150 hover:scale-125 hover:text-[#1e272e]"
               aria-label={settings.data.name + " on GitHub"}
             >
               <FaGithub />
@@ -81,7 +81,7 @@ export default async function Footer() {
           {isFilled.link(settings.data.instagram_link) && (
             <PrismicNextLink
               field={settings.data.instagram_link}
-              className="p-2 text-2xl text-slate-100 transition-all duration-150 hover:scale-125 hover:text-[#1e272e]"
+              className="p-2 text-2xl text-[#0A3981] transition-all duration-150 hover:scale-125 hover:text-[#1e272e]"
               aria-label={settings.data.name + " on Instagram"}
             >
               <FaInstagram />
@@ -90,7 +90,7 @@ export default async function Footer() {
           {isFilled.link(settings.data.linkedin_link) && (
             <PrismicNextLink
               field={settings.data.linkedin_link}
-              className="p-2 text-2xl text-slate-100 transition-all duration-150 hover:scale-125 hover:text-[#1e272e]"
+              className="p-2 text-2xl text-[#0A3981] transition-all duration-150 hover:scale-125 hover:text-[#1e272e]"
               aria-label={settings.data.name + " on LinkedIn"}
             >
               <FaLinkedin />
