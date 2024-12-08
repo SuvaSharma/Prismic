@@ -2,15 +2,17 @@ import React from "react";
 import { createClient } from "@/prismicio";
 import NavBar from "@/components/NavBar";
 
+// Define proper types for settings data
+type NavItem = { label: string; link: string };
+
 type Settings = {
   data: {
-    name: any;
-    nav_item: Array<{ label: string; link: any }>;
+    name: string;
+    nav_item: NavItem[];
   };
 };
 
 export default async function Header() {
-  // Fetch settings data
   const client = createClient();
   const settings = await client.getSingle("settings");
 
